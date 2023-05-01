@@ -7,17 +7,21 @@ import java.io.PrintWriter;
 
 import static java.lang.System.out;
 
-@WebServlet(name = "HelloWorldServlet", urlPatterns = {"/hello-world"})
+@WebServlet(name = "counterServlet", urlPatterns = "/count")
 
-public class HelloWorldServlet extends HttpServlet {
+public class counterServlet extends HttpServlet {
+    public static int count = 0;
+
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
         res.setContentType("text/html");
         PrintWriter out = res.getWriter();
-        String name = req.getParameter("name");
-        if (name != null) {
-            out.println("<h1>Hello, " + name + "!</h1>");
+        String reset = req.getParameter("reset");
+        if (reset == null) {
+            count++;
         } else {
-            out.println("<h1>Hello, World!</h1>");
+            count = 0;
         }
+        out.println("counter: " + count);
+
     }
 }
