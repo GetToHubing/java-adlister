@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html>
 
@@ -80,7 +79,7 @@
             </button>
         </div>
     </nav>
-    <form method="post" action="pizza_order">
+    <form method="post" action="pizzaOrder">
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                 <div class="card mb-5">
@@ -116,7 +115,8 @@
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Thin enough for optimum crispy to crunch ratio.</li>
                             <li class="list-group-item">
-                                <input class="form-check-input" type="radio" name="crustTypeAndSize" id="twelveInchCrispy"
+                                <input class="form-check-input" type="radio" name="crustTypeAndSize"
+                                       id="twelveInchCrispy"
                                        value="crispyThin12inch">
                                 <label class="form-check-label" for="twelveInchCrispy">
                                     Medium (12")
@@ -205,7 +205,8 @@
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="beef" name="topping" id="beef">
+                                    <input class="form-check-input" type="checkbox" value="beef" name="topping"
+                                           id="beef">
                                     <label class="form-check-label" for="beef">
                                         Beef
                                     </label>
@@ -221,7 +222,8 @@
                             </li>
                             <li class="list-group-item">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="phillysteak" name="topping" id="phillySteak">
+                                    <input class="form-check-input" type="checkbox" value="phillysteak" name="topping"
+                                           id="phillySteak">
                                     <label class="form-check-label" for="phillySteak">
                                         Philly Steak
                                     </label>
@@ -229,7 +231,8 @@
                             </li>
                             <li class="list-group-item">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="bacon" name="topping" id="bacon">
+                                    <input class="form-check-input" type="checkbox" value="bacon" name="topping"
+                                           id="bacon">
                                     <label class="form-check-label" for="bacon">
                                         Bacon
                                     </label>
@@ -244,7 +247,8 @@
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="greenpeppers" name="topping" id="greenPeppers">
+                                    <input class="form-check-input" type="checkbox" value="greenpeppers" name="topping"
+                                           id="greenPeppers">
                                     <label class="form-check-label" for="greenPeppers">
                                         Green Peppers
                                     </label>
@@ -252,7 +256,8 @@
                             </li>
                             <li class="list-group-item">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="mushrooms" name="topping" id="mushrooms">
+                                    <input class="form-check-input" type="checkbox" value="mushrooms" name="topping"
+                                           id="mushrooms">
                                     <label class="form-check-label" for="mushrooms">
                                         Mushrooms
                                     </label>
@@ -260,7 +265,8 @@
                             </li>
                             <li class="list-group-item">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="onions" name="topping" id="onions">
+                                    <input class="form-check-input" type="checkbox" value="onions" name="topping"
+                                           id="onions">
                                     <label class="form-check-label" for="onions">
                                         Onions
                                     </label>
@@ -268,7 +274,8 @@
                             </li>
                             <li class="list-group-item">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="jalapeno" name="topping" id="jalapeno">
+                                    <input class="form-check-input" type="checkbox" value="jalapeno" name="topping"
+                                           id="jalapeno">
                                     <label class="form-check-label" for="jalapeno">
                                         Jalapeno Peppers
                                     </label>
@@ -279,7 +286,8 @@
                             <!-- remember to have the button make the correct card pop up -->
                             <div class="btn-group" role="group">
                                 <button class="btn btn-primary " type="button">< Previous</button>
-                                <button class="btn btn-primary" type="submit" value="Submit">Checkout <i class="bi bi-cart-fill"></i></button>
+                                <button class="btn btn-primary" type="submit" value="Submit">Checkout <i
+                                        class="bi bi-cart-fill"></i></button>
                             </div>
                         </div>
                     </div>
@@ -287,7 +295,6 @@
             </div>
         </div>
     </form>
-
 </div>
 
 
@@ -297,7 +304,34 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-
+<%--<script src="https://code.jquery.com/jquery-3.6.4.min.js"--%>
+<%--        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>--%>
+<script>
+    $("#nextBtn1").click(function () {
+        $("#nav-home-tab").toggleClass("active");
+        $("#nav-home").toggleClass("active show");
+        $("#nav-profile-tab").toggleClass("active");
+        $("#nav-profile").toggleClass("active show");
+    });
+    $("#previousBtn1").click(function () {
+        $("#nav-home-tab").toggleClass("active");
+        $("#nav-home").toggleClass("active show");
+        $("#nav-profile-tab").toggleClass("active");
+        $("#nav-profile").toggleClass("active show");
+    });
+    $("#nextBtn2").click(function () {
+        $("#nav-profile-tab").toggleClass("active");
+        $("#nav-profile").toggleClass("active show");
+        $("#nav-contact-tab").toggleClass("active");
+        $("#nav-contact").toggleClass("active show");
+    });
+    $("#previousBtn2").click(function () {
+        $("#nav-profile-tab").toggleClass("active");
+        $("#nav-profile").toggleClass("active show");
+        $("#nav-contact-tab").toggleClass("active");
+        $("#nav-contact").toggleClass("active show");
+    });
+</script>
 </body>
 
 </html>
