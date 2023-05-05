@@ -133,7 +133,7 @@
                     </div>
                     <div class="card-footer text-end">
                         <!-- remember to have the button make the next card pop up....can't figure this out-->
-                        <a class="btn btn-primary " type="button">Next Step ></a>
+                        <a class="btn btn-primary " type="button" id="nextBtn1">Next Step ></a>
                     </div>
                 </div>
             </div>
@@ -149,12 +149,14 @@
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">How Much?</li>
                             <li class="list-group-item">
-                                <select class="form-select m-1" name="cheese">
-                                    <option value="normal">Normal</option>
-                                    <option value="light">Light</option>
-                                    <option value="extra">Extra</option>
-                                    <option value="double">Double</option>
-                                </select>
+                                <label>
+                                    <select class="form-select m-1" name="cheese">
+                                        <option value="normal">Normal</option>
+                                        <option value="light">Light</option>
+                                        <option value="extra">Extra</option>
+                                        <option value="double">Double</option>
+                                    </select>
+                                </label>
                             </li>
                         </ul>
                     </div>
@@ -165,30 +167,34 @@
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">What Type?</li>
                             <li class="list-group-item">
-                                <select class="form-select m-1" name="sauce">
-                                    <option value="tomato">Tomato</option>
-                                    <option value="marinara">Marinara</option>
-                                    <option value="bbq">BBQ</option>
-                                    <option value="alfredo">Alfredo</option>
-                                </select>
+                                <label>
+                                    <select class="form-select m-1" name="sauce">
+                                        <option value="tomato">Tomato</option>
+                                        <option value="marinara">Marinara</option>
+                                        <option value="bbq">BBQ</option>
+                                        <option value="alfredo">Alfredo</option>
+                                    </select>
+                                </label>
                             </li>
                         </ul>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">How Much?</li>
                             <li class="list-group-item">
-                                <select class="form-select m-1" name="sauceAmount">
-                                    <option value="normal">Normal</option>
-                                    <option value="light">Light</option>
-                                    <option value="extra">Extra</option>
-                                </select>
+                                <label>
+                                    <select class="form-select m-1" name="sauceAmount">
+                                        <option value="normal">Normal</option>
+                                        <option value="light">Light</option>
+                                        <option value="extra">Extra</option>
+                                    </select>
+                                </label>
                             </li>
                         </ul>
                     </div>
                     <div class="card-footer text-end">
                         <!-- remember to have the button make the next card pop up -->
                         <div class="btn-group" role="group" aria-label="Basic example">
-                            <a class="btn btn-primary " type="button">< Previous</a>
-                            <a class="btn btn-primary " type="button">Next ></a>
+                            <a class="btn btn-primary " id="previousBtn1" type="button">< Previous</a>
+                            <a class="btn btn-primary " id="nextBtn2" type="button">Next ></a>
                         </div>
                     </div>
                 </div>
@@ -285,7 +291,7 @@
                         <div class="card-footer text-end">
                             <!-- remember to have the button make the correct card pop up -->
                             <div class="btn-group" role="group">
-                                <button class="btn btn-primary " type="button">< Previous</button>
+                                <a class="btn btn-primary " id="previousBtn2" type="button">< Previous</a>
                                 <button class="btn btn-primary" type="submit" value="Submit">Checkout <i
                                         class="bi bi-cart-fill"></i></button>
                             </div>
@@ -304,8 +310,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-<%--<script src="https://code.jquery.com/jquery-3.6.4.min.js"--%>
-<%--        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>--%>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 <script>
     $("#nextBtn1").click(function () {
         $("#nav-home-tab").toggleClass("active");
